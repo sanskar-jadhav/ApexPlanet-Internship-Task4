@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanskar | Portfolio + To‑Do + Products</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="brand">Sanskar</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#todo">To‑Do</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero container">
+    <h1>Hi, I'm Sanskar</h1>
+    <p>Web Developer • Blockchain Enthusiast</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2>About</h2>
+    <p>
+      I build clean, responsive web apps with HTML, CSS, and JavaScript — and I love optimizing workflows.
+      This page combines a portfolio, a to‑do app with localStorage, and a product listing with filter/sort.
+    </p>
+  </section>
+
+  <!-- Projects (showcase cards) -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+    <div class="grid cards">
+      <article class="card">
+        <h3>Task 2: Contact Form + To‑Do</h3>
+        <p>Form validation, responsive layout, and DOM manipulation.</p>
+      </article>
+      <article class="card">
+        <h3>Task 3: Quiz + API Fetch</h3>
+        <p>Interactive quiz and Random Joke API integration.</p>
+      </article>
+      <article class="card">
+        <h3>Task 4: Full Project</h3>
+        <p>Portfolio + LocalStorage To‑Do + Product filter/sort.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- To‑Do (LocalStorage) -->
+  <section id="todo" class="section container">
+    <h2>To‑Do List</h2>
+    <div class="todo-box">
+      <div class="todo-inputs">
+        <input id="taskInput" type="text" placeholder="Enter a task"/>
+        <button id="addBtn" class="btn">Add Task</button>
+      </div>
+      <ul id="taskList" class="todo-list"></ul>
+      <div class="todo-actions">
+        <button id="clearAll" class="btn-outline">Clear All</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products (Filter + Sort) -->
+  <section id="products" class="section container">
+    <h2>Product Listing</h2>
+    <div class="controls">
+      <div class="control">
+        <label for="filterCategory">Category</label>
+        <select id="filterCategory">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+          <option value="books">Books</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="filterPrice">Max Price</label>
+        <input id="filterPrice" type="number" min="0" step="1" placeholder="e.g., 500"/>
+      </div>
+      <div class="control">
+        <label for="sortSelect">Sort By</label>
+        <select id="sortSelect">
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating-desc">Rating: High → Low</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+      <button id="applyFilters" class="btn">Apply</button>
+      <button id="resetFilters" class="btn-outline">Reset</button>
+    </div>
+
+    <div id="productList" class="grid products"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <form id="contactForm" class="contact-form" onsubmit="return false;">
+      <input type="text" id="name" placeholder="Your Name"/>
+      <input type="email" id="email" placeholder="Your Email"/>
+      <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+      <button id="contactSubmit" class="btn">Send</button>
+    </form>
+    <p class="muted">Note: This demo form shows UI only.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Sanskar — Built with HTML, CSS & JS</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
